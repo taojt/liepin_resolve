@@ -1,8 +1,6 @@
 # !/usr/bin/python
 # -*- coding:utf-8 -*-
 __author__ = 'Tao Jiang'
-# !/usr/bin/python
-# -*- coding:utf-8 -*-
 from mongo_connect import *
 from handling_liepin import handle_liepin
 import datetime
@@ -62,6 +60,7 @@ def test_liepin():
 		for d in db_cursor:
 			try:
 				resume = {}
+				# 解析简历
 				resume = handle_liepin(d)
 				if resume != {}:
 					cv_id = resume.get("cv_id")

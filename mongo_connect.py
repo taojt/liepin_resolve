@@ -3,7 +3,7 @@
 import pymongo
 from pymongo import MongoClient
 import logging
-log =logging.getLogger("DataUpdate")
+log =logging.getLogger("MongoCOnnect")
 
 
 def connect(database, collection, user="", password="", host="127.0.0.1", port=27017):
